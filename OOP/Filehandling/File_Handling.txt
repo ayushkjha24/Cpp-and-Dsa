@@ -1,0 +1,43 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main()
+{
+    //file ko open karna
+    ofstream fout;
+    fout.open("zoom.txtd");//create kr dega agar present nhi hoga to
+    //Write kr skta hu
+    fout<<"Hello India";
+    fout.close();
+    
+    
+    ifstream fin;
+    fin.open("zoom.txtd");
+    char c;
+    c=fin.get();//fin>>c
+    while(!fin.eof())
+    {
+        cout<<c;
+        c=fin.get();
+    };
+    cout<<endl;
+    fin.close();
+
+
+     vector<int>arr(5);
+    cout<<"Enter the input : ";
+    for(int i=0;i<5;i++)
+    cin>>arr[i];
+    //file ko open karo
+    ofstream fout;
+    fout.open("zero.txt");
+    
+    for(int i=0;i<5;i++)
+    {
+        fout<<arr[i]<<" ";
+    }
+    fout.close();
+
+    
+}

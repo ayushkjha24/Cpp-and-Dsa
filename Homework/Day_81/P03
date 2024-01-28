@@ -1,0 +1,21 @@
+bool isPalindrome(string str, int start, int end) {
+if (start >= end)
+return true;
+return (str[start] == str[end]) && isPalindrome(str, start + 1, end - 1);
+}
+
+Assume : size of str = n
+Recursive calls : isPalindrome( str, 0, n -1) -> isPalindrome( str, 1 ,
+n-2) -> isPalindrome( str, start+2, n-3) -> …… …………
+isPalindrome( str, mid, mid)
+……. ->
+So, no of recursive call will be ther (start to mid) or (mid to end)
+that is n/2 i.e size of str.
+But Here str is passed by value, so for each of the recursive call
+new string created for that call. So, copying str will take O(n) time
+complexity for each calls and there are nearly n/2 calls.
+Here str is passed by value, so for each of the recursive call
+new string created for that call. So, each calls space complexity is
+O(n), and there are nearly n/2 calls.
+Time Complexity : O( n ^2)
+Space Complexity : O( n^2 )

@@ -1,0 +1,9 @@
+bool isEven(int n) {
+if (n == 0)
+return true;
+return !isEven(n - 1);
+}
+
+Recursive calls : isEven(n) -> isEven(n-1) -> … …..-> isEven(0)
+Time Complexity : O(n)
+Space Complexity : O(n)

@@ -1,0 +1,17 @@
+void reverseString(string& str, int start, int end) {
+if (start < end) {swap(str[start], str[end]);
+reverseString(str, start + 1, end - 1);
+}
+}
+
+Assume : size of str = n
+Recursive calls : reverseString( str, 0, n -1) -> reverseString( str, 1 ,
+n-2) -> reverseString( str, start+2, n-3) -> …… …………
+reverseString( str, mid, mid)
+……. ->
+So, no of recursive call will be ther (start to mid) or (mid to end)
+that is n/2.
+Here str is passed by reference, so it the same str in every call,
+so, no extra space.
+Time Complexity : O( n )
+Space Complexity : O( n )

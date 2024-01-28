@@ -1,0 +1,14 @@
+Column Major Order:
+If elements of an array are stored in a column-major fashion means moving across the column 
+and then to the next column then it’s in column-major order. To find the address of the element 
+using column-major order use the following formula:
+
+Address of A[I][J] = B + W * ((J – LC) * M + (I – LR))  
+
+I = Row Subset of an element whose address to be found, 
+J = Column Subset of an element whose address to be found, 
+B = Base address, 
+W = Storage size of one element store in any array(in byte), 
+LR = Lower Limit of row/start row index of matrix(If not given assume it as zero), 
+LC = Lower Limit of column/start column index of matrix(If not given assume it as zero), 
+M = Number of rows given in the matrix.

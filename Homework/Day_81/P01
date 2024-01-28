@@ -1,0 +1,10 @@
+int fact(int n)
+{
+if(n<=1)
+return 1;
+return n*fact(n-1);
+}
+
+Recursive calls : fact(n) -> fact(n-1) -> … …… … -> fact(1).
+Time Complexity : O(n)
+Space Complexity : O(n)
